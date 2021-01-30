@@ -186,7 +186,6 @@ def run_all_tests(mod):
                 tests += 1
 
     if failed > 0:
-        logger.disabled = False
         # flush all captured logs from the app for debugging
         print('Captured logs...\n', file=sys.stderr)
         print(io_stream.getvalue(), file=sys.stderr)
