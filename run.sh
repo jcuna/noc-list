@@ -41,19 +41,3 @@ else
     python:3.8.7-alpine3.12 \
     /bin/ash -c "$COMMAND"
 fi
-
-#ex=$1
-#printf "$ex\n"
-#exit $ex
-
-
-#docker run \
-#    -t -i \
-#    -v "$(pwd)/src:/usr/local/noclist" \
-#    -w /usr/local/noclist \
-#    -e BADSEC_API=server.badsec.gov:8888 \
-#    --rm \
-#    --name noclist_v2_001 \
-#    --network sec-net \
-#    python:3.8.7-alpine3.12 \
-#    /bin/ash
