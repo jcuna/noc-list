@@ -4,7 +4,7 @@ if [ "$1" != "" ] && [ "$1" != "test" ] && [ "$1" != "stop" ]; then
     >&2 printf "Bad argument %s.\n" "${1}"
     >&2 printf "Options:\n"
     >&2 printf "\t<no args>          -- Starts badsec server if not running and runs the app\n"
-    >&2 printf "\t<stop>             -- Stop badesec server and clean ups docker stuff\n"
+    >&2 printf "\t<stop>             -- Stop badsec server and clean ups docker stuff\n"
     >&2 printf "\t<test>             -- Run tests on the api\n"
     exit 1;
 fi
