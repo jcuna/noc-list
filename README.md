@@ -27,9 +27,9 @@ noc-list/               # Root directory.
 ### Commands for running and testing application
 
 ```shell
-./noc.sh # Starts dependency server, runs the application and exits
-./noc.sh stop # Stops and removes dependencies
-./noc.sh test # runs automated tests against application
+./run.sh # Starts dependency server, runs the application and exits
+./run.sh stop # Stops and removes dependencies
+./run.sh test # runs automated tests against application
 ```
 
 ## References
