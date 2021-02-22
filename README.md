@@ -31,8 +31,3 @@ noc-list/               # Root directory.
 ./run.sh stop # Stops and removes dependencies
 ./run.sh test # runs automated tests against application
 ```
-
-## References
-
-- [AdHoc](https://homework.adhoc.team/noclist/)
-- [ZibaSec](https://github.com/zibasec/assignments)
