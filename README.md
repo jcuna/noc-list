@@ -1,6 +1,6 @@
 # NocList
 
-### A Highly classified top secret tool for military data interchange
+### Exercise
 This tool is an MVP to gracefully handle data interchange from [BADSEC](https://homework.adhoc.team/noclist/) 
 
 
