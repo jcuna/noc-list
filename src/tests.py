@@ -114,7 +114,7 @@ def test_api_auth():
 def test_api_service():
     req = HttpRequest('https://www.nowhere.com')
     req.set_headers({'first-header': 'a value'})
-    req.head('/', extra_headers={'custom-header': 'ZibaSec'})
+    req.head('/', extra_headers={'custom-header': 'X-Custom-Header'})
     # assert that url + path are in the request object
     assert payload['args'][0] == 'https://www.nowhere.com/', 'request was made to root path'
     # assert that headers added via set_headers method are present on request
@@ -122,14 +122,15 @@ def test_api_service():
     # assert that custom headers are preserved in request object
     assert 'custom-header' in payload['kwargs']['headers'], 'custom header should be used to build request'
     # assert value of custom header matches arg
-    assert payload['kwargs']['headers']['custom-header'] == 'ZibaSec', 'Custom header value should be ZibaSec'
+    assert payload['kwargs']['headers']['custom-header'] == 'X-Custom-Header',\
+        'Custom header value should be X-Custom-Header'
     # assert default headers are still present
     assert 'Content-Type' in payload['kwargs']['headers'], 'Default headers should also be in request'
     # assert that default headers values are intact
     assert payload['kwargs']['headers']['Content-Type'] == 'application/json', 'Content type should be application/json'
 
     req = HttpRequest('https://www.nowhere.com')
-    req.get('/users', extra_headers={'custom-header': 'ZibaSec'})
+    req.get('/users', extra_headers={'custom-header': 'X-Custom-Header'})
     assert isinstance(req.get_body(), str), 'RestRequest service should decode body to string'
     assert req.code
 
